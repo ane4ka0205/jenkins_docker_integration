@@ -19,6 +19,7 @@ pipeline{
             }
         }
         stage("Hello"){
+            when { tag "v0.1"}
             steps{
                 ws("${workspace}/tmp/"){
                     sh '''
